@@ -1,0 +1,3 @@
+#!/bin/bash
+
+systemctl enable feren-flatpak-management.service

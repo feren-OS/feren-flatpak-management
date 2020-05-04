@@ -1,0 +1,8 @@
+[Unit]
+Description=Clear Flatpak cache if Flatpak is not running
+
+[Service]
+ExecStart=/bin/bash -c "! pgrep -x flatpak && rm -rf /var/tmp/flatpak-cache-*"
+
+[Install]
+WantedBy=multi-user.target
